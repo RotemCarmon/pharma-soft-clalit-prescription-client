@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tetch\\source\\repos\\pharma-soft-clalit-prescription\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{44BDF41B-9263-4121-8614-F12FA5395EDD}|pharma-soft-clalit-prescription\\pharma-soft-clalit-prescription.csproj|c:\\users\\tetch\\source\\repos\\pharma-soft-clalit-prescription\\pharma-soft-clalit-prescription\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44BDF41B-9263-4121-8614-F12FA5395EDD}|pharma-soft-clalit-prescription\\pharma-soft-clalit-prescription.csproj|solutionrelative:pharma-soft-clalit-prescription\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44BDF41B-9263-4121-8614-F12FA5395EDD}|pharma-soft-clalit-prescription\\pharma-soft-clalit-prescription.csproj|c:\\users\\tetch\\source\\repos\\pharma-soft-clalit-prescription\\pharma-soft-clalit-prescription\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{44BDF41B-9263-4121-8614-F12FA5395EDD}|pharma-soft-clalit-prescription\\pharma-soft-clalit-prescription.csproj|solutionrelative:pharma-soft-clalit-prescription\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\tetch\\source\\repos\\pharma-soft-clalit-prescription\\pharma-soft-clalit-prescription\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "pharma-soft-clalit-prescription\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\tetch\\source\\repos\\pharma-soft-clalit-prescription\\pharma-soft-clalit-prescription\\MainWindow.xaml.cs",
+              "RelativeToolTip": "pharma-soft-clalit-prescription\\MainWindow.xaml.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAA9wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T11:23:08.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\tetch\\source\\repos\\pharma-soft-clalit-prescription\\pharma-soft-clalit-prescription\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "pharma-soft-clalit-prescription\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\tetch\\source\\repos\\pharma-soft-clalit-prescription\\pharma-soft-clalit-prescription\\MainWindow.xaml",
+              "RelativeToolTip": "pharma-soft-clalit-prescription\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-04T11:22:56.336Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
