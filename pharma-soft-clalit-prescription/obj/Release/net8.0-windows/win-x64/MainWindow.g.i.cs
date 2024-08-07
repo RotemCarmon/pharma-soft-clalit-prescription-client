@@ -85,7 +85,7 @@ namespace pharma_soft_clalit_prescription {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/pharma-soft-clalit-prescription;V1.0.0.0;component/mainwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/pharma-soft-clalit-prescription;component/mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\MainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

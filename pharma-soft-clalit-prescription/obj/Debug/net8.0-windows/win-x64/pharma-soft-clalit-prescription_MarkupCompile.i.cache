@@ -1,5 +1,5 @@
 ﻿pharma-soft-clalit-prescription
-
+1.0.0.0
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\tetch\source\repos\pharma-soft-clalit-prescription\pharma-soft-clalit-prescription\App.xaml
 11407045341
 
-41134214128
+6-1095592103
 198-635017904
 MainWindow.xaml;
 
-True
+False
 

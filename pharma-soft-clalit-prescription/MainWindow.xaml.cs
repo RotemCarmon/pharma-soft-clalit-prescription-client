@@ -1,11 +1,13 @@
 ﻿using Microsoft.Win32;
 using System.ComponentModel;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
 using System.Windows;
+using System;
 
 
 public class RequestPayload
@@ -99,8 +101,9 @@ namespace pharma_soft_clalit_prescription
             {
                 var response = await SendPostRequest(Id, Approval);
 
-                if (response.IsSuccessStatusCode)
+                if (response.StatusCode == HttpStatusCode.OK)
                 {
+                    Console.WriteLine("Response Success");
                     var fileName = await SaveFile(response,Id,Approval);
                     if (!string.IsNullOrEmpty(fileName))
                     {
@@ -132,20 +135,21 @@ namespace pharma_soft_clalit_prescription
                 Content = content
             };
 
-
-            // Set headers specific to this request
-            request.Headers.Add("requestingSite", "71");
-            request.Headers.Add("requestingApplication", "71");
-            request.Headers.Add("requestDateTime", DateTime.UtcNow.ToString("o"));
-            request.Headers.Add("requestID", "MAIN_PREPROD_12");
-
-
             var response = await client.SendAsync(request);
             return response;
         }
 
-        private async Task<string> SaveFile(HttpResponseMessage response, string id, string approval)
+        private static async Task<string> SaveFile(HttpResponseMessage response, string id, string approval)
         {
+            
+            var content = await response.Content.ReadAsStringAsync();
+            var jsonResponse = JsonDocument.Parse(content);
+
+     
+            var streamContent = jsonResponse.RootElement
+                                                .GetProperty("results")
+                                                .GetProperty("stream")
+                                                .GetString();
 
             string timestamp = DateTime.UtcNow.ToString("ddMMyyyy_HHmm");
             string defaultFileName = $"{id}_{approval}_{timestamp}.pdf";
@@ -157,14 +161,15 @@ namespace pharma_soft_clalit_prescription
                 Filter = "PDF documents (.pdf)|*.pdf"
             };
 
-            if (saveFileDialog.ShowDialog() == true)
+            if (saveFileDialog.ShowDialog() == true && streamContent != null)
             {
-                var fileStream = new FileStream(saveFileDialog.FileName, FileMode.Create, FileAccess.Write, FileShare.None);
-                await response.Content.CopyToAsync(fileStream);
-                fileStream.Close();
+                byte[] pdfBytes = Convert.FromBase64String(streamContent);
+                await File.WriteAllBytesAsync(saveFileDialog.FileName, pdfBytes);
                 return saveFileDialog.FileName;
             }
             return null;
+            
+            
         }
 
     }
