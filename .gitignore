@@ -1,3 +1,4 @@
+output*
 .vs
 obj/Release/*
 obj/Debug/*
