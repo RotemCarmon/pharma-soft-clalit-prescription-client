@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("pharma-soft-clalit-prescription")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55e2ad4e4edf9e6da54c162424a5c340c0800747")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edb4be4fb5d5228575ff97873b9b59832a7b2e38")]
 [assembly: System.Reflection.AssemblyProductAttribute("pharma-soft-clalit-prescription")]
 [assembly: System.Reflection.AssemblyTitleAttribute("pharma-soft-clalit-prescription")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
