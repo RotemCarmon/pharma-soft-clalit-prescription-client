@@ -14,4 +14,10 @@
 		<Folder Include="View\UserControls\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Update="config.xml">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
 </Project>

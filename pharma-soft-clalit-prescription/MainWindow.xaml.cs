@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.Json;
 using System.Windows;
 using System;
+using System.Xml.Linq;
 
 
 public class RequestPayload
@@ -28,7 +29,7 @@ namespace pharma_soft_clalit_prescription
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private static readonly HttpClient client = new HttpClient();
-        public const string URL = "https://pharmatech.clalit.org.il:7443/Pharmatech-To-Integration-MedicalApprovalPdfQuery-Prod/ClicksMedicalApprovalPdfQuery/api/MedicalApproval/GetPdfQuery";
+        static string url;
 
         private RequestPayload CreateRequestPayload(string id, string approval)
         {
@@ -56,11 +57,15 @@ namespace pharma_soft_clalit_prescription
         public MainWindow()
         {
             DataContext = this;
+            LoadConfiguration();
             InitializeComponent();
         }
 
+
+        private bool isLoading = false;
         private string id;
         public event PropertyChangedEventHandler? PropertyChanged;
+
 
         public string Id
         {
@@ -99,6 +104,10 @@ namespace pharma_soft_clalit_prescription
 
             try
             {
+                isLoading = true;
+                btnSubmit.Content = "בטעינה...";
+                btnSubmit.IsEnabled = false;
+
                 var response = await SendPostRequest(Id, Approval);
 
                 if (response.StatusCode == HttpStatusCode.OK)
@@ -119,6 +128,11 @@ namespace pharma_soft_clalit_prescription
             catch (Exception ex)
             {
                 MessageBox.Show($"שגיאה: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            } finally
+            {
+                isLoading = false;
+                btnSubmit.Content = "שליחה";
+                btnSubmit.IsEnabled = true;
             }
         }
 
@@ -129,8 +143,7 @@ namespace pharma_soft_clalit_prescription
             var json = JsonSerializer.Serialize(payload);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-
-            var request = new HttpRequestMessage(HttpMethod.Post, URL)
+            var request = new HttpRequestMessage(HttpMethod.Post, url)
             {
                 Content = content
             };
@@ -172,5 +185,33 @@ namespace pharma_soft_clalit_prescription
             
         }
 
+
+        private static void LoadConfiguration()
+        {
+            try
+            {
+                // Debugging information to confirm working directory
+                string currentDirectory = Directory.GetCurrentDirectory();
+                Console.WriteLine($"Current Directory: {currentDirectory}");
+
+                // Ensure the correct path to the config.xml file
+                string configFilePath = Path.Combine(currentDirectory, "config.xml");
+                Console.WriteLine($"Config File Path: {configFilePath}");
+
+
+                //Console.WriteLine("Startng to get the configuration file...");
+
+                XDocument config = XDocument.Load("config.xml");
+
+                url = config.Root.Element("url").Value;
+                
+                Console.WriteLine("Configuration loaded successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading configuration: " + ex.Message);
+                Environment.Exit(1);
+            }
+        }
     }
 }

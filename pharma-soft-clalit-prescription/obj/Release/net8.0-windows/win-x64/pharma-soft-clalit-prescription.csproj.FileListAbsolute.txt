@@ -19,3 +19,4 @@ C:\Users\tetch\source\repos\pharma-soft-clalit-prescription\pharma-soft-clalit-p
 C:\Users\tetch\source\repos\pharma-soft-clalit-prescription\pharma-soft-clalit-prescription\obj\Release\net8.0-windows\win-x64\pharma-soft-clalit-prescription.genruntimeconfig.cache
 C:\Users\tetch\source\repos\pharma-soft-clalit-prescription\pharma-soft-clalit-prescription\obj\Release\net8.0-windows\win-x64\ref\pharma-soft-clalit-prescription.dll
 C:\Users\tetch\source\repos\pharma-soft-clalit-prescription\pharma-soft-clalit-prescription\obj\Release\net8.0-windows\win-x64\pharma-soft-clalit-prescription.sourcelink.json
+C:\Users\tetch\source\repos\pharma-soft-clalit-prescription\pharma-soft-clalit-prescription\bin\Release\net8.0-windows\win-x64\config.xml

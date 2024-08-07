@@ -1,0 +1,6 @@
+C:\Users\tetch\source\repos\pharma-soft-clalit-prescription\output\config.xml
+C:\Users\tetch\source\repos\pharma-soft-clalit-prescription\output\pharma-soft-clalit-prescription.exe
+C:\Users\tetch\source\repos\pharma-soft-clalit-prescription\output\pharma-soft-clalit-prescription.dll
+C:\Users\tetch\source\repos\pharma-soft-clalit-prescription\output\pharma-soft-clalit-prescription.deps.json
+C:\Users\tetch\source\repos\pharma-soft-clalit-prescription\output\pharma-soft-clalit-prescription.runtimeconfig.json
+C:\Users\tetch\source\repos\pharma-soft-clalit-prescription\output\pharma-soft-clalit-prescription.pdb

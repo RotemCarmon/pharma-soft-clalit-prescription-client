@@ -27,7 +27,9 @@
                 <Label Content="מספר מרשם"  FontSize="20" Background="Transparent" VerticalAlignment="Center"/>
                     <TextBox VerticalContentAlignment="Center" Height="40" Grid.Row="1" Name="approvalTxtInput" FontSize="16" Text="{Binding Approval, UpdateSourceTrigger=PropertyChanged}" />
             </Grid>
-            <Button Content="שלח" Grid.Row="3" Height="45" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Name="btnSubmit" Click="btnSubmit_Click"  />
+            <Button 
+                Content="שליחה"
+                Grid.Row="3" Height="45" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Name="btnSubmit" Click="btnSubmit_Click"  />
         </StackPanel>
         </ScrollViewer>
     </Grid>
